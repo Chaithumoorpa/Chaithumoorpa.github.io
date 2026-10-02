@@ -9,22 +9,28 @@ export default function Contact() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
-    const subject = encodeURIComponent(form.subject || `Portfolio contact from ${form.name}`)
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-    window.open(`mailto:chaithu.moorpa@gmail.com?subject=${subject}&body=${body}`, '_blank')
-    setTimeout(() => {
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/chaithu.moorpa@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ ...form, _subject: form.subject || `Portfolio contact from ${form.name}`, _replyto: form.email }),
+      })
+      if (!res.ok) throw new Error()
       setStatus('success')
       setForm({ name: '', email: '', subject: '', message: '' })
-    }, 800)
+    } catch {
+      setStatus('error')
+    }
+    setTimeout(() => setStatus('idle'), 4000)
   }
 
   const inputClass = `w-full px-4 py-3 rounded-xl bg-bg3 border border-white/[0.08] text-white placeholder-white/25
@@ -168,12 +174,13 @@ export default function Contact() {
                 whileTap={status === 'idle' ? { scale: 0.98 } : {}}
               >
                 {status === 'idle' && <><FiSend size={15} /> Send Message</>}
-                {status === 'sending' && <><span className="animate-spin">⟳</span> Opening mail client...</>}
+                {status === 'sending' && <><span className="animate-spin">⟳</span> Sending...</>}
+                {status === 'error' && <>Failed — email me directly</>}
                 {status === 'success' && <><FiCheckCircle size={15} /> Message sent!</>}
               </motion.button>
 
               <p className="text-center text-white/25 text-xs font-mono">
-                Opens your default mail client · No data stored
+                Delivered straight to my inbox · No data stored
               </p>
             </form>
           </motion.div>

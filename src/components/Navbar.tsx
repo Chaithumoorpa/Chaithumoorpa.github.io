@@ -62,7 +62,7 @@ export default function Navbar() {
               </button>
             ))}
             <motion.a
-              href="mailto:chaithu.moorpa@gmail.com"
+              href="/Chaithanya_M_Resume.pdf" download
               className="ml-2 px-4 py-1.5 rounded-full border border-accent/50 text-accent text-sm font-medium hover:bg-accent/10 transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
@@ -101,7 +101,7 @@ export default function Navbar() {
               </button>
             ))}
             <a
-              href="mailto:chaithu.moorpa@gmail.com"
+              href="/Chaithanya_M_Resume.pdf" download
               className="mt-2 self-start px-5 py-2 rounded-full bg-accent/10 border border-accent/40 text-accent text-sm font-medium"
             >
               Hire Me
