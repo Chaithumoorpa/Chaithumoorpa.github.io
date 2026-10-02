@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend, FiCheckCircle } from 'react-icons/fi'
+import { SiLeetcode } from 'react-icons/si'
 
 export default function Contact() {
   const ref = useRef(null)
@@ -100,6 +101,11 @@ export default function Contact() {
                   className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
                   <FiLinkedin size={18} />
                   <span className="text-sm">linkedin.com/in/chaithu-moorpa</span>
+                </a>
+                <a href="https://leetcode.com/u/chaithanyamoorpa/" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
+                  <SiLeetcode size={18} />
+                  <span className="text-sm">leetcode.com/u/chaithanyamoorpa</span>
                 </a>
               </div>
             </div>

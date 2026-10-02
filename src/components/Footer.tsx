@@ -1,6 +1,7 @@
 'use client'
 
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi'
+import { SiLeetcode } from 'react-icons/si'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -20,6 +21,10 @@ export default function Footer() {
           <a href="https://linkedin.com/in/chaithu-moorpa" target="_blank" rel="noopener noreferrer"
             className="text-white/30 hover:text-accent transition-colors">
             <FiLinkedin size={18} />
+          </a>
+          <a href="https://leetcode.com/u/chaithanyamoorpa/" target="_blank" rel="noopener noreferrer"
+            className="text-white/30 hover:text-accent transition-colors">
+            <SiLeetcode size={18} />
           </a>
           <a href="mailto:chaithu.moorpa@gmail.com"
             className="text-white/30 hover:text-accent2 transition-colors">

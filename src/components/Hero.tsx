@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiPhone, FiArrowDown } from 'react-icons/fi'
+import { SiLeetcode } from 'react-icons/si'
 
 const techBadges = ['Java', 'Spring Boot', 'Microservices', 'Kafka', 'AWS', 'Docker']
 
@@ -157,6 +158,10 @@ export default function Hero() {
           <a href="https://linkedin.com/in/chaithu-moorpa" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent2 transition-colors">
             <FiLinkedin size={14} />
             LinkedIn
+          </a>
+          <a href="https://leetcode.com/u/chaithanyamoorpa/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <SiLeetcode size={14} />
+            LeetCode
           </a>
         </motion.div>
       </div>
