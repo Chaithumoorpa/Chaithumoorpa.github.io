@@ -7,9 +7,9 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 const projects = [
   {
     name: 'Nakama ERP',
-    type: 'Personal Project · In Progress',
-    description: 'Full-stack ERP system built with Spring Boot microservices and Next.js frontend. Features multi-tenant architecture, role-based access control, inventory management, and real-time reporting dashboards.',
-    tech: ['Java', 'Spring Boot', 'Microservices', 'Next.js', 'TypeScript', 'PostgreSQL', 'Kafka', 'Docker'],
+    type: 'Personal Project · Mar 2026 – Present',
+    description: 'Business management (ERP) application for inventory, billing, orders, and staff management. REST backend with JWT login and role-based access for owners, managers, and staff, plus offline data sync so shop devices keep working without internet and sync safely when back online.',
+    tech: ['Java', 'Spring Boot', 'REST APIs', 'JWT', 'RBAC'],
     github: 'https://github.com/Chaithumoorpa',
     live: null,
     status: 'in-progress',
@@ -17,9 +17,9 @@ const projects = [
   },
   {
     name: 'SVVD Thorur Temple Portal',
-    type: 'Community Project · Live',
-    description: 'Complete digital platform for SVVD Thorur temple — event scheduling, donation management, devotee registration, and admin dashboard. Serves the local community with real-time updates.',
-    tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'AWS', 'REST APIs'],
+    type: 'Personal Project · Jan 2026 – Present',
+    description: 'Live temple website with online seva booking and an admin portal for donations, accounts, and content. Runs on AWS with Docker, PostgreSQL, and automated GitHub Actions CI/CD deployment.',
+    tech: ['Python', 'FastAPI', 'Next.js', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker'],
     github: 'https://github.com/Chaithumoorpa',
     live: 'https://svvdthorur.org',
     status: 'live',
@@ -28,8 +28,8 @@ const projects = [
   {
     name: 'OMA-DM Device Management',
     type: 'Enterprise · Tech Mahindra',
-    description: 'Enterprise OMA-DM protocol implementation for Verizon and AT&T. Handles device configuration, firmware updates, and fault management at scale for millions of connected devices.',
-    tech: ['Java', 'Spring Boot', 'OMA-DM', 'REST APIs', 'PostgreSQL', 'Microservices'],
+    description: 'Spring Boot backend for Verizon & AT&T device management, built on Controller–Service–Repository architecture with SyncML request/response workflows, Spring Data JPA, and MSSQL persistence.',
+    tech: ['Java', 'Spring Boot', 'Spring Data JPA', 'MSSQL'],
     github: null,
     live: null,
     status: 'enterprise',
@@ -38,8 +38,8 @@ const projects = [
   {
     name: 'OMA-DM Test Server',
     type: 'Internal Tool · Tech Mahindra',
-    description: 'Automated test server for OMA-DM protocol compliance. Simulates device management sessions, validates protocol messages, and generates compliance reports.',
-    tech: ['Java', 'Spring Boot', 'JUnit', 'OMA-DM', 'REST APIs'],
+    description: 'Spring Boot test server simulating OMA-DM carrier operations for device certification and provisioning validation. REST endpoints for command scheduling and response processing, with a React frontend for test configuration, command triggering, and real-time response visualization.',
+    tech: ['Java', 'Spring Boot', 'React', 'REST APIs'],
     github: null,
     live: null,
     status: 'enterprise',
@@ -48,8 +48,8 @@ const projects = [
   {
     name: 'Google GChip Automation',
     type: 'Automation · Tech Mahindra',
-    description: 'End-to-end automation suite for Google GChip testing workflows. Reduced QA cycle time significantly through automated test orchestration and reporting pipelines.',
-    tech: ['Python', 'Java', 'Automation', 'REST APIs', 'CI/CD'],
+    description: 'Python automation framework built from scratch for validating Google SoC subsystems (CPU, GPU, DDR, DPU, VPU), integrating Jenkins, ADB, log parsing, and automated reporting.',
+    tech: ['Python', 'Jenkins', 'ADB'],
     github: null,
     live: null,
     status: 'enterprise',

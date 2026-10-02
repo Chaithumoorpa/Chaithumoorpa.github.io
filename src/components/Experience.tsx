@@ -9,25 +9,24 @@ const experiences = [
     role: 'Software Engineer',
     period: 'Dec 2023 – Feb 2026',
     location: 'Chennai, India',
-    tech: ['Java', 'Spring Boot', 'OMA-DM', 'Microservices', 'REST APIs', 'PostgreSQL', 'Kafka'],
+    tech: ['Java', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'MSSQL', 'Docker', 'Jenkins', 'JUnit'],
     highlights: [
-      'Engineered OMA-DM device management solutions deployed for Verizon and AT&T enterprise clients',
-      'Built and maintained microservices handling millions of device management transactions',
-      'Developed REST APIs with JWT authentication and RBAC for enterprise security compliance',
-      'Designed and automated Google GChip testing workflows reducing QA cycle by ~40%',
-      'Collaborated in Agile teams delivering sprint cycles across cross-functional stakeholders',
+      'Developed and maintained Spring Boot REST APIs and backend services for an enterprise OMA-DM Device Management Platform (Verizon & AT&T)',
+      'Integrated backend services with MSSQL using Spring Data JPA and Hibernate for data retrieval and command tracking',
+      'Investigated production issues by analyzing SyncML transactions, application logs, and MSSQL records; identified root causes, improved exception handling/logging, and validated fixes with JUnit',
+      'Deployed services on Apache Tomcat via Docker, built Jenkins CI/CD pipelines, and collaborated with QA, Android, and firmware teams in Agile/Scrum sprints',
+      'Developed reusable automation modules for firmware validation, regression execution, and device log analysis, improving debugging efficiency for Google firmware engineers',
     ],
   },
   {
     company: 'Cognizant',
     role: 'Programmer Trainee',
     period: 'Oct 2021 – Mar 2022',
-    location: 'Remote',
-    tech: ['Java', 'Spring', 'SQL', 'REST APIs'],
+    location: '',
+    tech: ['Java', 'Spring Boot', 'Hibernate', 'Maven', 'Git', 'JUnit'],
     highlights: [
-      'Completed intensive Java & Spring framework training program',
-      'Developed mini-projects demonstrating REST API design and database integration',
-      'Built foundational skills in enterprise Java development practices',
+      'Trained in Core Java, Spring Boot, REST APIs, Hibernate, Maven, and Git',
+      'Debugged Java/SQL modules for an enterprise banking project and supported unit testing using JUnit',
     ],
   },
 ]
@@ -75,8 +74,8 @@ export default function Experience() {
                       <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                       <div className="flex items-center gap-2 mt-1">
                         <span className="gradient-text font-semibold text-sm">{exp.company}</span>
-                        <span className="text-white/30">·</span>
-                        <span className="text-white/40 text-sm">{exp.location}</span>
+                        {exp.location && <><span className="text-white/30">·</span>
+                        <span className="text-white/40 text-sm">{exp.location}</span></>}
                       </div>
                     </div>
                     <span className="font-mono text-xs text-accent2 bg-accent2/10 px-3 py-1 rounded-full border border-accent2/20 whitespace-nowrap self-start">

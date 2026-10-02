@@ -7,17 +7,17 @@ const skillGroups = [
   {
     label: 'Backend',
     icon: '⚙️',
-    skills: ['Java', 'Spring Boot', 'Spring MVC', 'JPA', 'Hibernate', 'Microservices', 'REST APIs', 'JWT', 'RBAC'],
-  },
-  {
-    label: 'Messaging & Streaming',
-    icon: '📡',
-    skills: ['Apache Kafka', 'Event-Driven Architecture'],
+    skills: ['Java', 'Spring Boot', 'Spring MVC', 'Spring Data JPA', 'Hibernate', 'Microservices', 'Apache Kafka', 'Python', 'FastAPI'],
   },
   {
     label: 'Frontend',
     icon: '🎨',
-    skills: ['React', 'Next.js', 'TypeScript', 'Python', 'FastAPI'],
+    skills: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'HTML', 'CSS'],
+  },
+  {
+    label: 'APIs & Architecture',
+    icon: '📡',
+    skills: ['REST API Design', 'JWT Authentication', 'RBAC', 'Design Patterns', 'Data Structures & Algorithms'],
   },
   {
     label: 'Databases',
@@ -25,14 +25,14 @@ const skillGroups = [
     skills: ['PostgreSQL', 'MySQL', 'MSSQL'],
   },
   {
-    label: 'DevOps & Cloud',
+    label: 'DevOps & Tools',
     icon: '☁️',
-    skills: ['AWS', 'Docker', 'Jenkins', 'GitHub Actions', 'Maven', 'Linux', 'Tomcat'],
+    skills: ['AWS', 'Docker', 'Jenkins', 'GitHub Actions', 'Git', 'Maven', 'Linux', 'Tomcat', 'Postman'],
   },
   {
-    label: 'Tools & Practices',
+    label: 'Testing & Process',
     icon: '🛠️',
-    skills: ['Git', 'JUnit', 'Agile/Scrum', 'Jira', 'Postman'],
+    skills: ['JUnit', 'Agile/Scrum', 'Production Support', 'Root Cause Analysis', 'Debugging', 'GitHub Copilot', 'ChatGPT'],
   },
 ]
 

@@ -6,16 +6,16 @@ import { motion, useInView } from 'framer-motion'
 const education = [
   {
     degree: 'Master of Computer Applications (MCA)',
-    institution: 'Anna University',
-    period: '2021 – 2023',
+    institution: 'Sri Venkatesa Perumal College of Engineering and Technology, Puttur',
+    period: '2023',
     grade: 'CGPA 8.3 / 10',
     icon: '🎓',
   },
   {
-    degree: 'Bachelor of Science — Computer Science',
-    institution: 'University of Madras',
-    period: '2018 – 2021',
-    grade: 'B.Sc CS',
+    degree: 'B.Sc, Computer Science and Technology',
+    institution: 'Sri Venkateshwara University (SVU), Tirupati',
+    period: '2021',
+    grade: 'B.Sc',
     icon: '📚',
   },
 ]
